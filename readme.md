@@ -20,19 +20,16 @@ This simple python program uses the cx_Oracle Python extension module to communi
 The script demonstrates how easy it is to connect to an Oracle database and operate upon JSON within the database.
 
 ### jq1.sql
-This script demonstrates 
+This script demonstrates querying via SQL,  the newly created object that was just populated by the crjson.py python program.
 
 ### jq2.sql
-This script demonstrates 
+This script demonstrates how easy it is to create a table with a JSON document in the Oracle Database.  In this case the database version is 19c, so we rely on the check constraint "IS JSON" to validate that the content conforms to JSON format.
 
 ### jq3.sql
-This script demonstrates 
+This script demonstrates how it is possible to display regular Relational ROW-based data in a JSON document format without any special coding required.  This output could be ingested by an application that can read JSON.
 
 ### jq4.sql
-This script demonstrates 
-  
-### jq5.sql
-This script demonstrates 
+In this example we are runnin a regular SQL Select operation against the JSON document.  We are using the JSON_Object function call to display the output with our specific JSON mappings.  Here we are converting the EMPNO to ID and the ENAME to NAME.  This way we can match the output to what our application is expects without having to perform any schema conversion or evolution.   
 
 ### jq6.sql
 This script demonstrates the use of the JSON DataGuide which can derive the JSON Schema from sampling the JSON data.  We display the JSON Hierarchy, the definition and then a pretty format of the JSON document.
