@@ -1,4 +1,4 @@
-# Oracle External-Tables
+# Oracle JSON Sample Scripts
 Oracle Database - External Table samples and datasets
 
 This repository includes code samples and sample data for accessing Oracle External Tables.
@@ -38,7 +38,8 @@ This script demonstrates how an External Table can be populated into the Oracle 
 This is Part Two of a demonstration of using External Tables with the DATAPUMP Access driver. In this example we create an external table in a different database (or Pluggable Database) then the database where we created the external table from.  The dump file can then be loaded into this using the External Table approach or datapump.   
 
 ### jq7.sql
-This script demonstrates using an External Table to load a raw JSON file using the DATAPUMP Access driver.  The benefit of the DATAPUMP access driver in this case is that it can simplify working with BLOB objects and can be parallelized for speeding up data ingest.  
+This script demonstrates the use of the JSON DataGuide which can derive the JSON Schema from sampling the JSON data. 
+ 
 
 ### jq10.sql
 This script demonstrates loading JSON into the Oracle databae using an External Table.  The JSON file in this case is a raw dump file and is stored in a bucket in Oracle Object Storage.  This script relies on the Cloud Credential being already created in the database - this can be done using the demoscript- createCred.sql.  The file used in demo is the purchaseOrders.dmp and can be located in Github in the Oracle Sample Schemas repo. 
