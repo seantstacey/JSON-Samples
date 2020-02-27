@@ -20,26 +20,25 @@ This simple python program uses the cx_Oracle Python extension module to communi
 The script demonstrates how easy it is to connect to an Oracle database and operate upon JSON within the database.
 
 ### jq1.sql
-This script demonstrates an inline External Table. This form of external table is ephemeral in that the definition is only persisted during the life of the sql code. There is no requirement to drop the external table once the operation has completed.
+This script demonstrates 
 
 ### jq2.sql
-There is little to demonstrate in script itself,  the main purpose of this demonstration is to show simultaneous access to a single External Table from multiple pluggable databases.
+This script demonstrates 
 
 ### jq3.sql
-This script demonstrates how an External Table can be partitioned.  In this example we are Range partitioning based on multiple csv files.  This approach can help with performance as reads from the External Table can be parallelized.  This approach can also be useful when working with multiple data streams. 
+This script demonstrates 
 
 ### jq4.sql
-This script demonstrates Oracle Hybrid Partitioned Tables.  In this instance we are are creating a range-partitioned table.  The warmer (more recent) data is stored inside the database and the colder (older) data is stored in an external table.
+This script demonstrates 
   
 ### jq5.sql
-This script demonstrates how an External Table can be populated into the Oracle Database In-Memory Columnar Store. Be aware that for this script to see any benefit, the dataset  will need to be larger than 64K.
+This script demonstrates 
 
 ### jq6.sql
-This is Part Two of a demonstration of using External Tables with the DATAPUMP Access driver. In this example we create an external table in a different database (or Pluggable Database) then the database where we created the external table from.  The dump file can then be loaded into this using the External Table approach or datapump.   
+This script demonstrates the use of the JSON DataGuide which can derive the JSON Schema from sampling the JSON data.  We display the JSON Hierarchy, the definition and then a pretty format of the JSON document.
 
 ### jq7.sql
-This script demonstrates the use of the JSON DataGuide which can derive the JSON Schema from sampling the JSON data. 
- 
+This script demonstrates the use of the JSON DataGuide which can derive the JSON Schema from sampling the JSON data.  In this example we generate a view called Auto-View which can dynamically present the json hieracrhy based on the contents of the json  document.
 
 ### jq10.sql
 This script demonstrates loading JSON into the Oracle databae using an External Table.  The JSON file in this case is a raw dump file and is stored in a bucket in Oracle Object Storage.  This script relies on the Cloud Credential being already created in the database - this can be done using the demoscript- createCred.sql.  The file used in demo is the purchaseOrders.dmp and can be located in Github in the Oracle Sample Schemas repo. 
