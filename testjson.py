@@ -1,5 +1,5 @@
 import cx_Oracle
-con = cx_Oracle.connect('sean/sean@jdb')
+con = cx_Oracle.connect('sean/password@jdb')
 cur = con.cursor()
 ## cur.execute('create table test_json (id number generated always as identity, json_data clob)')
 cur.execute('create table test_json (id number generated always as identity, json_data clob, check (json_data IS JSON))')
